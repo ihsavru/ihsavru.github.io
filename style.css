@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Limelight|Monoton');
+
+body{
+	background-color: rgb(255, 251, 240);
+	padding: 20px;
+}
+
+#left, #right, #top, #bottom{
+	position: fixed;
+    background-color:  rgb(66, 18, 178);
+    margin: 30px;
+}
+
+#left, #right{
+	top:0;
+	bottom: 0;
+	width: 15px;
+}
+
+#left{
+	left:0;
+}
+
+#right{
+	right:0;
+}
+
+#top, #bottom{
+	left: 0;
+	right: 0;
+	height: 15px;
+}
+
+#top{
+	top: 0;
+}
+
+#bottom{
+	bottom: 0;
+}
+
+#title{
+	position: absolute;
+	top: 50%;
+	left:50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	font-size: 150px;
+	font-family: 'Monoton', cursive;
+	color: rgb(66, 18, 178);
+}

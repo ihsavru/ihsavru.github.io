@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Limelight|Monoton');
-@import url('https://fonts.googleapis.com/css?family=Archivo+Black');
+@import url('https://fonts.googleapis.com/css?family=Zilla+Slab');
 
 body{
-	background-color: rgb(255, 251, 240);
+	background: linear-gradient(to right, rgb(227, 240, 255),#ecf3fb);
 	padding: 20px;
 }
 
 #left, #right, #top, #bottom{
 	position: fixed;
-    background-color:  rgb(66, 18, 178);
+    background:  linear-gradient(#ffc3ca, #b397b8, #8a86be);
     margin: 30px;
 }
 
@@ -24,12 +24,14 @@ body{
 
 #right{
 	right:0;
+	background:  linear-gradient( #8a86be, #b397b8, #ffc3ca);
 }
 
 #top, #bottom{
 	left: 0;
 	right: 0;
 	height: 15px;
+	background:  linear-gradient(to right, #ffc3ca, #b397b8, #8a86be);
 }
 
 #top{
@@ -38,6 +40,7 @@ body{
 
 #bottom{
 	bottom: 0;
+	background:  linear-gradient(to left, #ffc3ca, #b397b8, #8a86be);
 }
 
 #title{
@@ -48,16 +51,28 @@ body{
 	transform: translate(-50%, -50%);
 	font-size: 150px;
 	font-family: 'Monoton', cursive;
-	color: rgb(66, 18, 178);
+	color: #8a86be;
 	cursor: pointer;
 }
 
 .links{
 	position: absolute;
 	width: 50px;
-	top:80%;
+	top:83%;
 	left: 70px;
 	font-size: 30px;
-	color: rgb(66, 18, 178);
+	color:rgb(67, 70, 144);
 	font-family: 'Archivo Black', sans-serif;
+}
+
+a:active, a:visited{
+	color: #8a86be;
+}
+
+a:hover{
+	text-shadow: 2px 2px #ffc3ca;
+}
+
+#title:hover{
+	text-shadow: 3px 3px #ffc3ca;
 }

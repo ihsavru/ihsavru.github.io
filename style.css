@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Limelight|Monoton');
+@import url('https://fonts.googleapis.com/css?family=Archivo+Black');
 
 body{
 	background-color: rgb(255, 251, 240);
@@ -48,4 +49,15 @@ body{
 	font-size: 150px;
 	font-family: 'Monoton', cursive;
 	color: rgb(66, 18, 178);
+	cursor: pointer;
+}
+
+.links{
+	position: absolute;
+	width: 50px;
+	top:80%;
+	left: 70px;
+	font-size: 30px;
+	color: rgb(66, 18, 178);
+	font-family: 'Archivo Black', sans-serif;
 }

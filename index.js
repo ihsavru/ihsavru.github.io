@@ -43,4 +43,19 @@ $(function(){
     $('#title').on('click', function(){
         window.location.href = 'index.html';
     });
+     $('#backdrop').animate({
+            left: '50%',
+            top: '50%'
+        }, 800);
+        $('#one').animate({
+            top: '50%',
+            left: '50%'
+        }, 1000);
+        $('#two').animate({
+            left: '50%',
+            top: '50%'
+        }, 1200);
+        $('#name').animate({
+            opacity: '1'
+        },1500);
 });

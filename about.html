@@ -27,8 +27,14 @@
         <li id="work">work.</li>
         <li id="art">art.</li>
     </ul>
+    <div class="content">
     <div id="base">about.</div>
     <div id="theme" class="hover"><i class="fa fa-heart" aria-hidden="true"></i></div>
+    <div id="backdrop"></div>
+    <img id= 'one' height="500px" src="avatar1.jpg">
+    <img id='two' height="500px" src="avatar2.jpg">
+    <div id="name">URVASHI.</div>
+    </div>
 </body>
 <style type="text/css">
     #title{
@@ -50,5 +56,55 @@
         font-family: 'Arvo', serif;
         color: #8a86be;
     }
+    img, #backdrop, #name{
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+    #one{
+        top:0;
+        left: 50%;
+        transform: translate(-60%,-60%);
+    }
+
+    #backdrop{
+        width: 700px;
+        height: 300px;
+        left:0;
+        top: 50%;
+        background:  linear-gradient(#ffc3ca, #b397b8, #8a86be);
+    }
+    
+    #name{
+        left: 50%;
+        letter-spacing: 100px;
+        font-size: 100px;
+        font-family: 'Arvo', serif;
+        color: rgb(253, 199, 0);
+        opacity: 0;
+    }
+
 </style>
+<script type="text/javascript">
+    $(function(){
+        $('#backdrop').animate({
+            left: '50%',
+            top: '50%'
+        }, 800);
+        $('#one').animate({
+            top: '50%',
+            left: '50%'
+        }, 1000);
+        $('#two').animate({
+            left: '50%',
+            top: '50%'
+        }, 1200);
+        $('#name').animate({
+            opacity: '1'
+        },1500);
+
+    })
+</script>
 </html>

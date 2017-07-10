@@ -1,5 +1,6 @@
 $(function(){
     $('.menu').on('click',function(){
+        $('.content').fadeOut('slow');
         $('#title').animate({left: '100px', top: '100px', fontSize: '100px'}, 1000);
         $('#list').animate({fontSize: '100px', left: '50%'}, 1000);
     });
@@ -11,6 +12,9 @@ $(function(){
             fontSize: '50px',
             bottom: 0,
         }, 1000);
+        $('#list').css({
+            'text-decoration': 'line-through'
+        });
         $('#up').fadeOut('slow');
         $('#side').fadeOut('slow');
         setTimeout(function(){window.location.href = "about.html";}, 1200);
@@ -31,6 +35,9 @@ $(function(){
         }, 1000);
         $('#base').fadeOut('slow');
         $('#side').fadeOut('slow');
+        $('#list').css({
+            'text-decoration': 'line-through'
+        });
         setTimeout(function(){window.location.href = "art.html";}, 1200);
     });
     $('#title').on('click', function(){

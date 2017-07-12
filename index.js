@@ -1,6 +1,7 @@
 $(function(){
     $('.menu').on('click',function(){
         $('.content').fadeOut('slow');
+        $('#backdrop').fadeOut('slow');
         $('#title').animate({left: '100px', top: '100px', fontSize: '100px'}, 1000);
         $('#list').animate({fontSize: '100px', left: '50%'}, 1000);
     });
@@ -43,19 +44,24 @@ $(function(){
     $('#title').on('click', function(){
         window.location.href = 'index.html';
     });
-     $('#backdrop').animate({
+    setTimeout(function(){
+        $('#backdrop').animate({
             left: '50%',
-            top: '50%'
+            top: '50%',
+            opacity: '1'
         }, 800);
         $('#one').animate({
             top: '50%',
-            left: '50%'
+            left: '50%',
+            opacity: '1'
         }, 1000);
         $('#two').animate({
             left: '50%',
-            top: '50%'
+            top: '50%',
+            opacity: '1'
         }, 1200);
         $('#name').animate({
             opacity: '1'
         },1500);
+    },1500);
 });

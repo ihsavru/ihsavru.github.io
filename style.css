@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Limelight|Monoton');
 @import url('https://fonts.googleapis.com/css?family=Arvo:700');
 
-
+* {
+    box-sizing: border-box;
+}
 body{
 	background-color: rgb(227, 240, 255);
 	padding: 20px;
@@ -58,8 +60,8 @@ body{
 .links{
 	position: absolute;
 	width: 50px;
-	top:83%;
-	left: 70px;
+	bottom: 50px;
+	left: 50px;
 	font-size: 30px;
 	font-family: 'Archivo Black', sans-serif;
 }

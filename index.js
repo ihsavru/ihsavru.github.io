@@ -2,16 +2,16 @@ $(function(){
     $('.menu').on('click',function(){
         $('.content').fadeOut('slow');
         $('#backdrop').fadeOut('slow');
-        $('#title').animate({left: '100px', top: '100px', fontSize: '100px'}, 1000);
-        $('#list').animate({fontSize: '100px', left: '50%'}, 1000);
+        $('#title').animate({left: '60px', top: '60px', fontSize: '30px', lineHeight: '30px'}, 1000);
+        $('#list').animate({fontSize: '10vh', left: '50%', lineHeight: '10vh'}, 1000);
     });
     $('#about').on('click', function(){
         $('#work').fadeOut('slow');
         $('#art').fadeOut('slow');
         $('#list').animate({
-            letterSpacing: '50px',
-            fontSize: '50px',
-            bottom: 0,
+            letterSpacing: '5vw',
+            fontSize: '5vw',
+            bottom: '50px'
         }, 1000);
         $('#list').css({
             'text-decoration': 'line-through'
@@ -30,8 +30,8 @@ $(function(){
         $('#work').fadeOut('slow');
         $('#about').fadeOut('slow');
         $('#list').animate({
-            letterSpacing: '50px',
-            fontSize: '50px',
+            letterSpacing: '5vw',
+            fontSize: '5vw',
             top: 0,
         }, 1000);
         $('#base').fadeOut('slow');

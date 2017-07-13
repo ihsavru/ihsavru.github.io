@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>urvashi</title>
+    <link rel="icon" href="favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
@@ -39,16 +40,17 @@
 </body>
 <style type="text/css">
     #title{
-        left: 100px;
-        top: 100px;
-        font-size: 100px;
+        left: 60px;
+        top: 60px;
+        line-height: 30px;
+        font-size: 30px;
     }
 
     #base{
         position: absolute;
         left: 50%;
-        font-size: 50px;
-        letter-spacing: 50px;
+        font-size: 5vw;
+        letter-spacing: 5vw;
         bottom: 50px;
         padding: 0;
         text-decoration: line-through;
@@ -61,7 +63,7 @@
         position: absolute;
         right: 0;
         top: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-45%,-45%);
         opacity: 0;
         width: 20%;
         height: auto;
@@ -70,7 +72,7 @@
     #one{
         top:0;
         left: 50%;
-        transform: translate(-60%,-60%);
+        transform: translate(-55%,-55%);
     }
 
     #backdrop{
@@ -78,6 +80,7 @@
         height: 20%;
         left:0;
         top: 50%;
+        transform: translate(-50%,-50%);
         background:  linear-gradient(#ffc3ca, #b397b8, #8a86be);
     }
     
@@ -95,6 +98,28 @@
         color: rgb(253, 199, 0);
         opacity: 0;
     }
+     @media only screen and (max-width: 800px){
+        #backdrop{
+            height: 40%;
+            width: 70%;
+        }
+        #one,#two{
+            height: 60%;
+            width: auto;
+        }
+    }
+        @media only screen and (max-width: 600px){
+        #backdrop{
+            height: 60%;
+            width: 40%;
+        }
+        #one,#two{
+            width: 60%;
+            height: auto;
+        }
+    }
+
+    
 
 </style>
 

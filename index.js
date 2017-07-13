@@ -32,7 +32,7 @@ $(function(){
         $('#list').animate({
             letterSpacing: '5vw',
             fontSize: '5vw',
-            top: 0,
+            top: '5vw',
         }, 1000);
         $('#base').fadeOut('slow');
         $('#side').fadeOut('slow');

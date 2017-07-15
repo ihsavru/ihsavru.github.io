@@ -8,37 +8,43 @@ $(function(){
     $('#about').on('click', function(){
         $('#work').fadeOut('slow');
         $('#art').fadeOut('slow');
-        $('#list').animate({
+        $('#about').animate({
             letterSpacing: '5vw',
-            fontSize: '5vw',
-            bottom: '50px'
+            fontSize: '5vw'
         }, 1000);
-        $('#list').css({
+        $('#about').css({
             'text-decoration': 'line-through'
         });
         $('#up').fadeOut('slow');
         $('#side').fadeOut('slow');
+        $('#about').fadeOut('slow');
         setTimeout(function(){window.location.href = "about.html";}, 1200);
     });
     $('#work').on('click', function(){
-        $('#list').fadeOut('slow');
         $('#up').fadeOut('slow');
-        $('#base').fadeOut('slow');
+        $('#work').animate({
+            letterSpacing: '5vw',
+            fontSize: '5vw'
+        }, 1000);
+        $('#work').css({
+            'text-decoration': 'line-through'
+        });
+        $('#base').fadeOut('slow'); 
+        $('#list').fadeOut('slow');
         setTimeout(function(){window.location.href = "work.html";}, 1200);
     });
     $('#art').on('click', function(){
         $('#work').fadeOut('slow');
-        $('#about').fadeOut('slow');
-        $('#list').animate({
+        $('#art').animate({
             letterSpacing: '5vw',
-            fontSize: '5vw',
-            top: '5vw',
+            fontSize: '5vw'
         }, 1000);
         $('#base').fadeOut('slow');
         $('#side').fadeOut('slow');
-        $('#list').css({
+        $('#art').css({
             'text-decoration': 'line-through'
         });
+        $('#list').fadeOut('slow');
         setTimeout(function(){window.location.href = "art.html";}, 1200);
     });
     $('#title').on('click', function(){
@@ -65,3 +71,4 @@ $(function(){
         },1500);
     },1500);
 });
+

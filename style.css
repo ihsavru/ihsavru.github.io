@@ -50,6 +50,8 @@ body{
 	position: absolute;
 	top: 50%;
 	left:50%;
+	-o-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
 	-webkit-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 	font-size: 150px;
@@ -95,6 +97,8 @@ a{
 	position: absolute;
 	font-size: 0px;
 	list-style-type: none;
+	-o-transform: translate(-50%,0);
+	-moz-transform: translate(-50%,0);
 	-webkit-transform: translate(-50%,0);
 	transform: translate(-50%,0);
 	left: 100%;
@@ -104,6 +108,9 @@ a{
 }
 
 li:hover{
+	-o-transform: translateX(10px);
+	-moz-transform: translateX(10px);
+	-webkit-transform: translateX(10px);
 	transform: translateX(10px);
 	text-decoration: line-through;
 	cursor: pointer;

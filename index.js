@@ -70,5 +70,17 @@ $(function(){
             opacity: '1'
         },1500);
     },1500);
+
+    $('#first').on('click',function(){
+        $('#avatar').animate({opacity: 1}, 500);
+        $('#education > img').animate({opacity:'0'}, 500);
+        $('#education > div').animate({opacity:'0'}, 500);
+    })
+
+    $('#second').on('click',function(){
+        $('#avatar').animate({opacity: 0}, 500);
+        $('#education > img').animate({opacity:'1'}, 500);
+        $('#education > div').animate({opacity:'1'}, 500);
+    })
 });
 

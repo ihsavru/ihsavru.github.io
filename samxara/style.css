@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Barrio|Dosis|Meddon|Montserrat+Subrayada:400,700');
+body{
+    background-color: black;
+    color: white;
+}
+
+h1{
+    font-family: 'Barrio', cursive;
+    font-size: 10vh;
+}
+
+.nav{
+    font-family: 'Dosis', sans-serif;
+    word-spacing: 2vh;
+    font-size: 2vh;
+}
+
+.nav > a{
+    color: white;
+    text-decoration: none;
+}
+
+.nav > a:hover{
+    opacity: 0.6;
+}
+
+.contact{
+    word-spacing: 2vh;
+    font-size: 2.5vh;
+}
+
+.contact > a{
+    color: white;
+}
+
+.contact a:hover, .contact a:active{
+    
+    -webkit-animation: icon3d 200ms infinite;
+    animation: icon3d 200ms infinite;
+  
+}
+
+@keyframes icon3d {
+  0% {
+    text-shadow: 3px 1px rgba(244,67,54,1), -5px -6px rgba(33,150,243,1);
+  }
+  25% {
+    text-shadow: -3px -4px rgba(244,67,54,1), 5px 4px rgba(33,150,243,1);
+  }
+  50% {
+    text-shadow: 3px -2px rgba(244,67,54,1), -8px 4px rgba(33,150,243,1);
+  }
+  75% {
+    text-shadow: -6px -2px rgba(244,67,54,1), -5px -4px rgba(33,150,243,1);
+  }
+  100% {
+    text-shadow: -3px 0 rgba(244,67,54,1), 5px -4px rgba(33,150,243,1);
+  }
+}
+
+form{
+    margin-top: 50px;
+    position: absolute;
+    width: 40%;
+    left: 50%;
+    transform: translate(-50%,0);
+    border: 5px solid white;
+    padding: 2vh;
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+    font-family: 'Dosis', sans-serif;
+
+}
+label,input[type=submit]{
+    padding: 10px;
+}
+
+@media only screen and (max-width: 1000px){
+    form{
+        width: 80%;
+    }
+}
+input, textarea{
+    border-radius: 0 !important;
+    font-family: 'Dosis', sans-serif;
+}
+
+input[type=submit]{
+    color: white;
+    border: 5px solid white;
+    background-color: black ;
+}

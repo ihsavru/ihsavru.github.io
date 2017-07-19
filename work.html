@@ -18,7 +18,7 @@
     </div>
     <div id="title" class="hover">U</div>
     <div class="links">
-        <a href="https://www.facebook.com/urvashi.verma.7334"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+        <a href="https://www.facebook.com/urvashi.verma.7334"><i class="hover fa fa-facebook-square" aria-hidden="true"></i></a>
         <a href="https://www.instagram.com/shiaurv/"><i class="hover fa fa-instagram" aria-hidden="true"></i></a>
         <a href="https://github.com/ihsavru"><i class="hover fa fa-github-square" aria-hidden="true"></i></a>
         <a href="https://twitter.com/urvaxhi"><i class="hover fa fa-twitter-square" aria-hidden="true"></i></a>
@@ -30,7 +30,13 @@
         <li id="work">work.</li>
         <li id="art">art.</li>
     </ul>
-    <div id="side">work.</div>
+    <div class="content">
+        <div id="side">work.</div>
+        <ul>
+            <a href="index.html"><li> > This website!</li></a>
+            <a href="30-days-of-code.hmtl"><li> > 30 days of code</li></a>
+        </ul>
+    </div>
     <div id="theme" class="hover"><i class="fa fa-heart" aria-hidden="true"></i></div>
 </body>
 <style type="text/css">
@@ -50,10 +56,33 @@
         -moz-transform: rotate(-90deg);
         -webkit-transform: rotate(-90deg);
         transform: rotate(-90deg);
-        left: 0;
+        left: -7vw;
         text-decoration: line-through;
         font-family: 'Arvo', serif;
         color: #8a86be;
+        padding: 0;
+        margin: 0;
+    }
+
+    @media only screen and (max-width: 500px){
+        #side{
+            left: -20vw;
+        }
+    }
+
+    .content > ul{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -o-transform: translate(-50%,-50%);
+        -moz-transform: translate(-50%,-50%);
+        -webkit-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+        list-style-type: none;
+        font-size: 2vw;
+        font-family: 'Arvo', serif;
+        color: #8a86be;
+        text-decoration: none;
     }
 </style>
 </html>

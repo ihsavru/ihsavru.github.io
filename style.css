@@ -127,6 +127,10 @@ li:hover{
     height: 100%;
     background-color: rgb(227, 240, 255);
     z-index: 1001;
+    padding: 0;
+    margin: 0;
+    left: 0;
+    top: 0;
 }
 
 .preloader > h3,.preloader > img{
@@ -135,12 +139,13 @@ li:hover{
     top: 50%;
     transform: translate(-50%,-50%);
     animation: icon3d 2ms infinite;
-    font-size: 8vh;
-    letter-spacing: 5vw;
+    font-size: 6vw;
+    letter-spacing: 2vw;
 	font-family: 'Arvo', serif;
     color: white;
+    padding: 0;
+    margin: 0;
 }
-
 .preloader > img{
 	width: 30%;
 	height: auto;

@@ -83,4 +83,6 @@ $(function(){
         $('#education > div').animate({opacity:'1'}, 500);
     })
 });
-
+$(window).on('load',function(){
+            $('.preloader').fadeOut();
+        })

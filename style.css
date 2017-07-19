@@ -13,6 +13,7 @@ body{
 	position: fixed;
     background:  linear-gradient(#ffc3ca, #b397b8, #8a86be);
     margin: 30px;
+    z-index: 1002;
 }
 
 #left, #right{
@@ -120,3 +121,40 @@ li:hover{
 	visibility: hidden;
 }
 
+.preloader{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(227, 240, 255);
+    z-index: 1001;
+}
+
+.preloader > h3{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    animation: icon3d 2ms infinite;
+    font-size: 8vh;
+    letter-spacing: 5vw;
+	font-family: 'Arvo', serif;
+    color: white;
+}
+
+@keyframes icon3d {
+  0% {
+    text-shadow: 3px 1px rgba(244,67,54,1), -5px -6px rgba(33,150,243,1);
+  }
+  25% {
+    text-shadow: -3px -4px rgba(244,67,54,1), 5px 4px rgba(33,150,243,1);
+  }
+  50% {
+    text-shadow: 3px -2px rgba(244,67,54,1), -8px 4px rgba(33,150,243,1);
+  }
+  75% {
+    text-shadow: -6px -2px rgba(244,67,54,1), -5px -4px rgba(33,150,243,1);
+  }
+  100% {
+    text-shadow: -3px 0 rgba(244,67,54,1), 5px -4px rgba(33,150,243,1);
+  }
+}

@@ -129,7 +129,7 @@ li:hover{
     z-index: 1001;
 }
 
-.preloader > h3{
+.preloader > h3,.preloader > img{
     position: absolute;
     left: 50%;
     top: 50%;
@@ -141,6 +141,11 @@ li:hover{
     color: white;
 }
 
+.preloader > img{
+	width: 30%;
+	height: auto;
+	border: none;
+}
 @keyframes icon3d {
   0% {
     text-shadow: 3px 1px rgba(244,67,54,1), -5px -6px rgba(33,150,243,1);

@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Electrolize|Wallpoet');
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+	background-color: black;
+	color: rgba(255,255,255,0.6);
+	max-width: 100%;
+	overflow-x: hidden;
+	font-family: 'Wallpoet', cursive;
+}
+
+.front{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+
+	h1{
+		color: rgba(255,255,255,0.8);
+	}
+
+	h2{
+		font-family: 'Electrolize', sans-serif;
+	}
+
+	a,i{
+		color: rgba(255,255,255,1);
+	}
+	i{
+		font-size: 3vh;
+		cursor: pointer;
+	}
+}
+
+
+

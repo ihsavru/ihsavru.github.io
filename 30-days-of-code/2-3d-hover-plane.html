@@ -6,6 +6,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <style type="text/css">
         @import url('https://fonts.googleapis.com/css?family=Graduate');
+        @import url('https://fonts.googleapis.com/css?family=Poiret+One');
         html,body{
             height: 100%;
             padding: 0;
@@ -45,9 +46,38 @@
             opacity: 0.6;
             color: #705353;
         }
+        .day, .back{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            left: 50%; 
+            font-family: 'Poiret One', cursive;
+            color:  #f3f6fb;
+            padding: 10px;
+            margin: 10px;
+            background-color: #705353;
+        }
+        .day > h1{
+            font-size: 50px;
+        }
+        .day > h3{
+            color:  #f3f6fb;
+        }
+        a{
+            color: #f3f6fb;
+            text-decoration: none;
+        }
+        .back{
+            left: 0;
+            color: #f3f6fb;
+            font-size: 50px;
+        }
     </style>
 </head>
 <body>
+    <div class="back"><a href="javascript:history.back()"><strong><</strong></a></div>
+    <div class="day"><h1>DAY 2</h1><h3>22 JULY 2017</h3></div>
     <div class="container">
         <div class="text">
             <h1>URVASHI</h1>

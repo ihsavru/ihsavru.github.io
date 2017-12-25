@@ -8,6 +8,7 @@ body,html {
     width: 100%;
     height: 100%;
     margin: 0;
+    background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
 }
 
 div {
@@ -86,6 +87,8 @@ i:hover {
 @media screen and (max-width: 1200px) {
     img {
         float: none;
+        height: 30vh;
+        width: auto;
     }
     h1 {
     text-align: left;
@@ -96,3 +99,51 @@ i:hover {
        margin-top: 6vh;
     }
 }
+
+svg {
+    width: 30vh;
+}
+
+.signature {
+    height: 10vh;
+}
+.sign{
+            stroke:#ffecd2;
+            stroke-width:15px;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-dasharray: 5000;
+        }
+        .urvashi{
+            animation: write1 6s infinite linear;
+        }
+        .dot{
+            animation: write2 6s infinite linear;
+        }
+        .underline{
+            animation: write3 6s infinite linear;
+        }
+        @keyframes write1 {
+            0% {
+                stroke-dashoffset: 5000;
+            }
+            60% {
+                stroke-dashoffset: 0;
+            }
+        }
+        @keyframes write2 {
+            0%,40% {
+                stroke-dashoffset: 5000;
+            }
+            90% {
+                stroke-dashoffset: 0;
+            }
+        }
+        @keyframes write3 {
+            0%,50% {
+                stroke-dashoffset: 5000;
+            }
+            100% {
+                stroke-dashoffset: 0;
+            }
+        }

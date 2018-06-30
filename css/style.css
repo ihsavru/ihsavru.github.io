@@ -1,149 +1,64 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:500|Raleway');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Roboto+Condensed');
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body,html {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
-div {
-    padding: 0;
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
 }
 
-.header {
-    width: 100%;
-    height: 100%;
-    color:#ccc;
-    padding: 10vh;
+.nav {
+  padding: 60px 60px;
 }
 
-.header h1 {
-    font-size: 6vh;
-    letter-spacing: 6vh;
-    font-family: 'Montserrat', sans-serif;
-    border-bottom: 1px solid  #ccc;
+.nav a {
+  color: black;
+  border-bottom: 2px solid #fff0f5;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 10px;
+  padding: 5px;
 }
 
-img {
-    width: 50vh;
-    float: right;
+.nav a:hover {
+  animation:
+    fillIn 300ms ease-out;
+  box-shadow: inset 50px 0px #fff0f5;
 }
 
-.mt-100 {
-    margin-top: 10vh;
+.active {
+
 }
 
-ul {
-    list-style-type: none;
-    font-family: 'Raleway', serif;
-    padding-left: 0;
-    font-size: 18px;
-    color: #101010;
-    border-bottom: 1px solid  #ccc;
-    width: 35%;
-    padding-bottom: 30px;
+@keyframes fillIn {
+  from {
+    box-shadow: none;
+  }
+
+  to {
+    box-shadow: inset 50px 0px #fff0f5;
+  }
 }
 
-li {
-    background-color: #ccc;
-    margin:2px;
+h1 {
+  font-size: 5em;
 }
 
-.links a {
-    color:#ccc !important;
-    font-size:25px;
-    padding: 5px;
+.gallery img {
+  width: 100%;
+  margin: 50px 0px;
 }
 
-i:hover {
-    color: #101010;
+.contact a {
+  cursor: pointer;
+  color: #5f9ea0;
 }
-
-@media screen and (max-width: 1000px){
-    .header h1 {
-        letter-spacing: 2vh;
-        font-size: 4vh;
-        margin-left: 15px;
-    }
-
-    .header {
-        padding: 8vh;
-    }
-
-    img {
-        width: 60vw;
-    }
-
-    ul {
-        width: 60%;
-    }
-}
-
-@media screen and (max-width: 1200px) {
-    img {
-        float: none;
-        height: 30vh;
-        width: auto;
-    }
-    h1 {
-    text-align: left;
-    margin-left: 15px;
-    }
-
-    .mt-100 {
-       margin-top: 6vh;
-    }
-}
-
-svg {
-    width: 30vh;
-}
-
-.signature {
-    height: 10vh;
-}
-.sign{
-            stroke:#ffecd2;
-            stroke-width:15px;
-            stroke-linecap: round;
-            stroke-linejoin: round;
-            stroke-dasharray: 5000;
-        }
-        .urvashi{
-            animation: write1 6s infinite linear;
-        }
-        .dot{
-            animation: write2 6s infinite linear;
-        }
-        .underline{
-            animation: write3 6s infinite linear;
-        }
-        @keyframes write1 {
-            0% {
-                stroke-dashoffset: 5000;
-            }
-            60% {
-                stroke-dashoffset: 0;
-            }
-        }
-        @keyframes write2 {
-            0%,40% {
-                stroke-dashoffset: 5000;
-            }
-            90% {
-                stroke-dashoffset: 0;
-            }
-        }
-        @keyframes write3 {
-            0%,50% {
-                stroke-dashoffset: 5000;
-            }
-            100% {
-                stroke-dashoffset: 0;
-            }
-        }

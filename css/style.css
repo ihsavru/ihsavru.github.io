@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow: hidden;
+}
+
 body,html {
   width: 100%;
   height: 100%;
@@ -14,6 +18,23 @@ body,html {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Playfair Display', serif;
+}
+
+.headline {
+  animation: slideUp 500ms cubic-bezier(0.42, 1.32, 0.75, 1.5) 100ms;
+}
+
+.gallery {
+  animation: slideUp 500ms cubic-bezier(0.42, 1.32, 0.75, 1.5) 200ms;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(-130px);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
 
 .nav {
@@ -50,12 +71,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 5em;
+  font-size: 7rem;
 }
 
 .gallery img {
   width: 100%;
   margin: 50px 0px;
+}
+
+.contact {
+  animation: slideUp 500ms cubic-bezier(0.42, 1.32, 0.75, 1.5);
 }
 
 .contact a {
@@ -65,8 +90,6 @@ h1 {
 
 svg, path {
   position: absolute;
-  left: -100px;
-  top: -100px;
   stroke: #ffefd5;
   z-index: -1;
   fill: none;
@@ -75,6 +98,16 @@ svg, path {
   stroke-linejoin: round;
   stroke-dasharray: 2000;
   animation: strokeHeart 2s ease-out;
+}
+
+.heart {
+  left: -100px;
+  top: -100px;
+}
+
+.draw {
+  left: -40px;
+  top: -100px;
 }
 
 @keyframes strokeHeart {
@@ -87,9 +120,16 @@ svg, path {
 }
 
 @media only screen and (max-width: 1000px) {
-  svg, path {
+  .heart {
     position: absolute;
     left: 0;
     top: 0;
+    width: 100%;
+  }
+  .draw {
+    width: 100%;
+  }
+  .headline {
+    font-size: 5rem;
   }
 }

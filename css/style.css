@@ -85,3 +85,11 @@ svg, path {
     stroke-dashoffset: 0;
   }
 }
+
+@media only screen and (max-width: 1000px) {
+  svg, path {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}

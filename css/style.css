@@ -22,7 +22,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav a {
   color: black;
-  border-bottom: 2px solid #fff0f5;
+  border-bottom: 2px solid #ffefd5;
   text-decoration: none;
   cursor: pointer;
   margin: 10px;
@@ -32,7 +32,7 @@ h1, h2, h3, h4, h5, h6 {
 .nav a:hover {
   animation:
     fillIn 300ms ease-out;
-  box-shadow: inset 50px 0px #fff0f5;
+  box-shadow: inset 50px 0px #ffefd5;
 }
 
 .active {
@@ -45,7 +45,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   to {
-    box-shadow: inset 50px 0px #fff0f5;
+    box-shadow: inset 50px 0px #ffefd5;
   }
 }
 
@@ -61,4 +61,27 @@ h1 {
 .contact a {
   cursor: pointer;
   color: #5f9ea0;
+}
+
+svg, path {
+  position: absolute;
+  left: -100px;
+  top: -100px;
+  stroke: #ffefd5;
+  z-index: -1;
+  fill: none;
+  stroke-width: 8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 2000;
+  animation: strokeHeart 2s ease-out;
+}
+
+@keyframes strokeHeart {
+  from {
+    stroke-dashoffset: 2000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
 }

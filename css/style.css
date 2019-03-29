@@ -43,7 +43,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav a {
   color: black;
-  border-bottom: 2px solid #ffefd5;
+  border-bottom: 2px solid #ffd5d5;
   text-decoration: none;
   cursor: pointer;
   margin: 10px;
@@ -52,12 +52,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav a:hover {
   animation:
-    fillIn 300ms ease-out;
-  box-shadow: inset 50px 0px #ffefd5;
+    fillIn 1000ms ease-out;
+  box-shadow: inset 180px 0px #ffd5d5;
 }
 
 .active {
-
+  background-color: #ffd5d5;
 }
 
 @keyframes fillIn {
@@ -66,7 +66,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   to {
-    box-shadow: inset 50px 0px #ffefd5;
+    box-shadow: inset 120px 0px #ffd5d5;
   }
 }
 
@@ -90,14 +90,14 @@ h1 {
 
 svg, path {
   position: absolute;
-  stroke: #ffefd5;
+  stroke: #ffd5d5;
   z-index: -1;
   fill: none;
   stroke-width: 8;
   stroke-linecap: round;
   stroke-linejoin: round;
-  stroke-dasharray: 2000;
-  animation: strokeHeart 2s ease-out;
+  stroke-dasharray: 4000;
+  animation: strokeHeart 4s ease-out;
 }
 
 .heart {
@@ -110,9 +110,15 @@ svg, path {
   top: -100px;
 }
 
+.bulb {
+  left: 10px;
+  top: 50px;
+  width: 30vw;
+}
+
 @keyframes strokeHeart {
   from {
-    stroke-dashoffset: 2000;
+    stroke-dashoffset: 4000;
   }
   to {
     stroke-dashoffset: 0;
@@ -131,5 +137,14 @@ svg, path {
   }
   .headline {
     font-size: 5rem;
+  }
+  .bulb {
+    position: absolute;
+    left: -10px;
+    top: 80px;
+    width: 100%;
+  }
+  .nav {
+    text-align: left;
   }
 }

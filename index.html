@@ -5,98 +5,75 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width initial-scale=1">
   <link rel="icon" href="img/favicon.png">
-      <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
-
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="assets/js/nav.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.js"></script>
+  <link rel="stylesheet" type="text/css" href="assets/css/base.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/index.css">
 </head>
 <body>
-  <div class="col-md-12 nav text-right">
-    <a class="active" href="index.html">Home</a>
-    <a href="https://medium.com/@ihsavru">Blog</a>
-    <a href="art.html">Art</a>
-    <a href="sketchnotes.html">Sketchnotes</a>
-  </div>
-  <div class="row">
-    <div class="col-md-5 col-md-offset-2 text-left">
-      <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-      <!-- Created with Inkscape (http://www.inkscape.org/) -->
-
-      <svg
-        class="heart"
-         viewBox="0 0 600 600"
-         id="svg2"
-         version="1.1"
-         inkscape:version="0.91 r13725"
-         sodipodi:docname="drawing.svg">
-        <defs
-           id="defs4" />
-        <sodipodi:namedview
-           id="base"
-           pagecolor="#ffffff"
-           bordercolor="#666666"
-           borderopacity="1.0"
-           inkscape:pageopacity="0.0"
-           inkscape:pageshadow="2"
-           inkscape:zoom="0.7"
-           inkscape:cx="212.98897"
-           inkscape:cy="594.32952"
-           inkscape:document-units="px"
-           inkscape:current-layer="layer1"
-           showgrid="false"
-           inkscape:window-width="1920"
-           inkscape:window-height="1017"
-           inkscape:window-x="0"
-           inkscape:window-y="30"
-           inkscape:window-maximized="1" />
-        <metadata
-           id="metadata7">
-          <rdf:RDF>
-            <cc:Work
-               rdf:about="">
-              <dc:format>image/svg+xml</dc:format>
-              <dc:type
-                 rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-              <dc:title></dc:title>
-            </cc:Work>
-          </rdf:RDF>
-        </metadata>
-        <g
-           inkscape:label="Layer 1"
-           inkscape:groupmode="layer"
-           id="layer1">
-           <path
-              d="m 307.14285,435.21935 c 0,0 -243.023273,-65.47995 -278.571423,-217.14285 C -8.4907051,59.954338 202.85714,88.076488 247.14285,183.79078 291.42856,279.50506 65.714287,59.505058 308.57142,20.933638 574.75471,-21.342532 350,368.07649 282.85714,450.93364 c -49.86631,61.53715 -50,19.99999 -50,19.99999"
-              id="path4138"
-              inkscape:connector-curvature="0"
-              sodipodi:nodetypes="cssssc" />
-        </g>
-      </svg>
-
-      <h1 class="headline">
-        Hello, I am <b>Urvashi</b>, a computer science undergraduate at Delhi Technological University.
-      </h1>
+  <div id="nav"></div>
+  <div id="contact"></div>
+  <div class="content">
+    <div class="avatar">
+      <img src="assets/img/avatar.jpg"/>
+    </div>
+    <div class="intro-text">
+      <h1>Welcome to my space</h1>
+      <p>Hello, my name is Urvashi. I am 20 years old and I am a Computer Science undergrad student
+        at Delhi Technological University. I love to draw.
+        Currently, I am learning to speak French.
+        <br><br>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat.
+        <br><br>
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+        qui officia deserunt mollit anim id est laborum.</p>
     </div>
   </div>
-  <div class="row contact">
-    <div class="col-md-8 col-md-offset-2">
-      <span><b>Contact</b></span>
-      <a href="https://github.com/ihsavru">Github</a>
-      <a  href="https://www.linkedin.com/in/ihsavru/">LinkedIn</a>
-      <a href="https://twitter.com/urvaxhi">Twitter</a>
-      <p>vurvashi11@gmail.com</p>
-    </div>
-  </div>
-  <!-- jQuery library -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <img class="bottom-nav-text" src="assets/img/about.png" />
+  <div id="circle_1"></div>
+  <div id="circle_2"></div>
+  <div id="circle_3"></div>
+  <script>
+        let circle_1 = document.getElementById('circle_1');
+        let circle_2 = document.getElementById('circle_2');
+        let circle_3 = document.getElementById('circle_3');
 
-  <!-- Latest compiled JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
-  <script type="text/javascript">
-    AOS.init();
+        let simplex = new SimplexNoise(),
+        value2d = simplex.noise2D(1, 10);
+        let x = 2;
+        let y = 10000;
+        setInterval(() => {
+          let xv = simplex.noise2D(x, x);
+          let yv = simplex.noise2D(y, y);
+          circle_1.style = `transform: translate(${(xv * 5) % 90}%, ${(yv * -10) % 50}%)`;
+          circle_2.style = `transform: translate(${(xv * 10) % 30}%, ${(yv * 5) % 40}%)`;
+          circle_3.style = `transform: translate(${(xv * -5) % 50}%, ${(yv * 10) % 90}%)`;
+          x+=0.001;
+          y += 0.001;
+        }, 1);
+        let underline = () => {
+          let aboutLink = document.getElementById('menu').children[0];
+          console.log(aboutLink)
+          aboutLink.style = 'border-bottom: 5px solid #D3E2E9';
+        };
+        function addLoadEvent(func) {
+          var oldonload = window.onload;
+          if (typeof window.onload != 'function') {
+            window.onload = func;
+          } else {
+            window.onload = function() {
+              if (oldonload) {
+                oldonload();
+              }
+              func();
+            }
+          }
+        }
+        addLoadEvent(underline);
   </script>
 </body>
 </html>

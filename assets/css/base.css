@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900|Playfair+Display:400,700&display=swap");
+body {
+  font-family: "Lato";
+  font-weight: 100;
+  color: #171717;
+}
+
+.bottom-nav-text {
+  width: 60vw;
+  position: absolute;
+  right: -30px;
+  bottom: -30px;
+}
+
+#nav {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  margin: 0 50px;
+}
+
+#logo {
+  grid-column: 1;
+}
+#logo .nav-title {
+  font-family: "Playfair Display";
+  font-weight: 700;
+  font-size: 30px;
+  background: linear-gradient(180deg, #fff 0%, #fff 50%, #E9E8E3 50%, #E9E8E3 100%);
+  width: fit-content;
+}
+
+#menu {
+  grid-column: 2;
+  margin: auto 0;
+  text-align: right;
+}
+#menu a {
+  margin: auto 10px;
+  text-decoration: none;
+  color: #171717;
+}
+
+#contact {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: auto 0;
+}
+#contact ul {
+  list-style-type: none;
+}
+#contact ul li {
+  margin: 40px 20px;
+}
+#contact svg {
+  width: 25px;
+  fill: #BDB6AA;
+  cursor: pointer;
+}
+#contact svg:hover {
+  animation: contact 200ms forwards cubic-bezier(0.17, 0.67, 0.69, 1.5);
+}
+
+@keyframes contact {
+  100% {
+    fill: #85837B;
+    width: 30px;
+  }
+}
+
+/*# sourceMappingURL=base.css.map */

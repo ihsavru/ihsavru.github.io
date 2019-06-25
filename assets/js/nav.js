@@ -8,8 +8,9 @@ window.onload = () => {
   menu.innerHTML = `
     <a href=''>about</a>
     <a>work</a>
+    <a>projects</a>
     <a>skills</a>
-    <a>blog</a>
+    <a href="https://medium.com/@ihsavru" target="__blank">blog</a>
     <a href='http://thecodedose.com' target="__blank">thecodedose</a>
   `
   document.getElementById('nav').append(logo, menu);

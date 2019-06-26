@@ -6,8 +6,8 @@ window.onload = () => {
   let menu = document.createElement('div');
   menu.setAttribute('id', 'menu');
   menu.innerHTML = `
-    <a href=''>about</a>
-    <a>work</a>
+    <a href='index.html'>about</a>
+    <a href='work.html'>work</a>
     <a>projects</a>
     <a>skills</a>
     <a href="https://medium.com/@ihsavru" target="__blank">blog</a>

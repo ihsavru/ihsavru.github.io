@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>urvashi</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1">
+  <link rel="icon" href="img/favicon.png">
+  <script src="assets/js/nav.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.js"></script>
+  <link rel="stylesheet" type="text/css" href="assets/css/base.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/work.css">
+</head>
+<body>
+  <div class="body">
+  <div id="nav"></div>
+  <div id="contact"></div>
+  <div class="content">
+    <div class="section-one">
+      <div class="left-column">
+        <h1>Unit Testing p5.js</h1>
+        <p>p5.js is a client-side JS platform that empowers artists, designers,
+           students, and anyone to learn to code and express themselves creatively
+           on the web.<br>
+            This project focuses on improving the unit tests as well as creating
+           a more complete unit test coverage for p5.js. This project also
+           includes creating a tutorial for new contributors, covering the basics
+            of unit testing for p5.js and how to write and add them. <br>
+          I am working with Mocha, a powerful testing framework that executes
+          individual test files which are specific to p5.js; mocha-chrome, a mocha
+           plugin that runs mocha tests using headless Google Chrome;
+           Chai.js assert, is used as a guide for phrasing assertion messages so
+           that any errors caught by the tests in the future will be consistent
+           and consequently easier for other developers to understand.
+        </p>
+      </div>
+      <div class="right-column">
+        <h3>Google Summer of Code</h3>
+        <p>May '19 - Present</p>
+        <p>Google Summer of Code is a global program focused on
+          bringing more student developers into open source
+          software development. Students work with an open
+          source organization on a 3 month programming
+          project during their break from school.</p><br>
+        <h3>The Processing Foundation</h3>
+        <p>Initially created to serve as a software sketchbook and to teach
+          programming fundamentals within a visual context, Processing has
+          evolved into a new medium for professionals and students alike. The
+          Processing software is free and open source, and runs on the Mac,
+          Windows, and GNU/Linux platforms.</p>
+      </div>
+    </div>
+    <div class="section-two hide">
+      <div class="left-column">
+        <h1>Improve support for photo/media contribution campaigns on Wikimedia Programs & Events Dashboard</h1>
+        <p>The Wiki Education Dashboard / Programs & Events Dashboard helps
+          people organize groups of newcomers who volunteer their time and hard
+          work to contribute to Wikipedia. It is used by the global Wikipedia
+          Education Program for Wikipedia writing assignments in college and high
+          school classes, the Art + Feminism editathon campaign, and many other
+          thematic in-person and online outreach projects.<br>
+          This project focused on improving the support for photo/media
+          contribution campaigns. A user research was conducted with
+          Wikimedians who organize photo campaigns to identify and prioritize
+          additional improvements and thus a new interface for
+          viewing photo uploads was designed and built.
+        </p>
+      </div>
+      <div class="right-column">
+        <h3>Outreachy</h3>
+        <p>May '18 - August '18</p>
+        <p>Outreachy provides internships to work in Free and Open Source Software (FOSS).
+          Outreachy internship projects may include programming, user experience,
+          documentation, illustration, graphical design, or data science.</p><br>
+        <h3>Wikimedia Foundation</h3>
+        <p>The Wiki Education Foundation (sometimes abbreviated Wiki Ed) is a
+          nonprofit organization based in San Francisco, California.
+           It runs the Wikipedia Education Program, which promotes the integration
+            of Wikipedia into coursework by educators in Canada and the United States.</p>
+      </div>
+    </div>
+    <div class="next-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 476.2 476.2"><polygon points="345.6 107.5 324.4 128.7 418.8 223.1 0 223.1 0 253.1 418.8 253.1 324.4 347.5 345.6 368.7 476.2 238.1 "/></svg>
+    </div>
+  </div>
+  </div>
+  <img class="bottom-nav-text" src="assets/img/work.png" />
+  <div id="circle_1"></div>
+  <div id="circle_2"></div>
+  <div id="circle_3"></div>
+  <div id="circle_4"></div>
+  <script>
+        let circle_1 = document.getElementById('circle_1');
+        let circle_2 = document.getElementById('circle_2');
+        let circle_3 = document.getElementById('circle_3');
+        let circle_4 = document.getElementById('circle_4');
+
+        let simplex = new SimplexNoise(),
+        value2d = simplex.noise2D(1, 10);
+        let x = 2;
+        let y = 10000;
+        setInterval(() => {
+          let xv = simplex.noise2D(x, x);
+          let yv = simplex.noise2D(y, y);
+          circle_1.style = `transform: translate(${(xv * 5) % 90}%, ${(yv * -10) % 50}%)`;
+          circle_2.style = `transform: translate(${(xv * 10) % 30}%, ${(yv * 5) % 40}%)`;
+          circle_3.style = `transform: translate(${(xv * -5) % 50}%, ${(yv * 10) % 90}%)`;
+          circle_4.style = `transform: translate(${(xv * -6) % 50}%, ${(yv * 8) % 80}%)`;
+          x+=0.001;
+          y += 0.001;
+        }, 1);
+        let underline = () => {
+          let workLink = document.getElementById('menu').children[1];
+          workLink.style = 'border-bottom: 5px solid #D3E2E9';
+        };
+        function addLoadEvent(func) {
+          var oldonload = window.onload;
+          if (typeof window.onload != 'function') {
+            window.onload = func;
+          } else {
+            window.onload = function() {
+              if (oldonload) {
+                oldonload();
+              }
+              func();
+            }
+          }
+        }
+        addLoadEvent(underline);
+
+        let nextBtn = document.getElementsByClassName('next-btn')[0];
+        nextBtn.onclick = () => {
+          document.getElementsByClassName('section-two')[0].classList.toggle('hide');
+          document.getElementsByClassName('section-one')[0].classList.toggle('hide');
+        }
+  </script>
+</body>
+</html>

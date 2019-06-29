@@ -8,7 +8,7 @@ window.onload = () => {
   menu.innerHTML = `
     <a href='index.html'>about</a>
     <a href='work.html'>work</a>
-    <a>projects</a>
+    <a href='projects.html'>projects</a>
     <a>skills</a>
     <a href="https://medium.com/@ihsavru" target="__blank">blog</a>
     <a href='http://thecodedose.com' target="__blank">thecodedose</a>

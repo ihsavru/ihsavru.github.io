@@ -139,13 +139,15 @@ html, body, .body {
 }
 @media only screen and (max-width: 700px) {
   .content .avatar img {
-    transform: translateY(-20%);
     width: 70vw;
+    box-shadow: none;
+  }
+  .content .intro-text {
+    margin-left: 0;
   }
   .content .intro-text h1 {
-    text-align: center;
-    font-size: 1.5rem;
-    width: auto;
+    text-align: left;
+    font-size: 2.5rem;
   }
 }
 

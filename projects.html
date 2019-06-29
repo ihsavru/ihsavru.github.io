@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>urvashi</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1">
+  <link rel="icon" href="img/favicon.png">
+  <script src="assets/js/nav.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.js"></script>
+  <link rel="stylesheet" type="text/css" href="assets/css/base.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/projects.css">
+</head>
+<body>
+  <div>
+  <div id="nav"></div>
+  <div id="contact"></div>
+  <div class="content">
+
+    <div class="row-one">
+      <a class="chatbot" target="_blank" href="https://github.com/ihsavru/LanguageBot"></a>
+      <a target="_blank" href="https://github.com/ihsavru/Chefy" class="chefy"></a>
+      <a target="_blank" href="https://divya063.pythonanywhere.com" class="prohyre">
+        <h1>Pro<b>HYRE</b></h1>
+      </a>
+    </div>
+    <div class="row-two">
+      <a href="https://ihsavru.me/30-days-of-code/" target="_blank" class="days-of-code">
+        <div class="bottom">
+          <div class="base" id="t">3</div>
+          <div class="base" id="z">0 &nbsp;&nbsp;</div>
+          <div class="base" id="d">D</div>
+          <div class="base" id="a">A</div>
+          <div class="base" id="y">Y</div>
+          <div class="base" id="s">S</div><br>
+          <div class="base" id="o">O</div>
+          <div class="base" id="f">F &nbsp;&nbsp;</div>
+          <div class="base" id="c">C</div>
+          <div class="base" id="oo">O</div>
+          <div class="base" id="dd">D</div>
+          <div class="base" id="ee">E</div>
+        </div>
+        <div class="cutout">
+          <div class="top" id="t">3  </div>
+          <div class="top" id="z">0 &nbsp;&nbsp;</div>
+          <div class="top" id="d">D</div>
+          <div class="top" id="a">A</div>
+          <div class="top" id="y">Y</div>
+          <div class="top" id="s">S</div><br>
+          <div class="top" id="o">O</div>
+          <div class="top" id="f">F &nbsp;&nbsp;</div>
+          <div class="top" id="c">C</div>
+          <div class="top" id="oo">O</div>
+          <div class="top" id="dd">D</div>
+          <div class="top" id="ee">E</div>
+        </div>
+      </a>
+      <a target="_blank" class="jsgamelab" href="https://ihsavru.me/JSGameLab/src/">
+        <div class="glitch" data-text="JSGAMELAB">JSGAMELAB</div>
+      </a>
+      <a href="https://www.instagram.com/thecodedose/" target="_blank" class="thecodedose">
+      </a>
+    </div>
+  </div>
+  </div>
+  <img class="bottom-nav-text" src="assets/img/projects.png" />
+  <div id="circle_1"></div>
+  <div id="circle_2"></div>
+  <div id="circle_3"></div>
+  <script>
+        let circle_1 = document.getElementById('circle_1');
+        let circle_2 = document.getElementById('circle_2');
+        let circle_3 = document.getElementById('circle_3');
+
+        let simplex = new SimplexNoise(),
+        value2d = simplex.noise2D(1, 10);
+        let x = 2;
+        let y = 10000;
+        setInterval(() => {
+          let xv = simplex.noise2D(x, x);
+          let yv = simplex.noise2D(y, y);
+          circle_1.style = `transform: translate(${(xv * 5) % 90}%, ${(yv * -10) % 50}%)`;
+          circle_2.style = `transform: translate(${(xv * 10) % 30}%, ${(yv * 5) % 40}%)`;
+          circle_3.style = `transform: translate(${(xv * -5) % 50}%, ${(yv * 10) % 90}%)`;
+          x+=0.001;
+          y += 0.001;
+        }, 1);
+        let underline = () => {
+          let workLink = document.getElementById('menu').children[2];
+          workLink.style = 'border-bottom: 5px solid #D3E2E9';
+        };
+        function addLoadEvent(func) {
+          var oldonload = window.onload;
+          if (typeof window.onload != 'function') {
+            window.onload = func;
+          } else {
+            window.onload = function() {
+              if (oldonload) {
+                oldonload();
+              }
+              func();
+            }
+          }
+        }
+        addLoadEvent(underline);
+  </script>
+</body>
+</html>

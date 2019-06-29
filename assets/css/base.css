@@ -8,9 +8,9 @@ body {
 }
 
 .bottom-nav-text {
-  width: 50vw;
+  height: 15vh;
   position: fixed;
-  bottom: -3vh;
+  bottom: -2vh;
   right: -1vw;
   z-index: -1;
 }
@@ -73,7 +73,7 @@ body {
 }
 @media only screen and (max-width: 1500px) {
   .bottom-nav-text {
-    width: 40vw;
+    height: 13vh;
     bottom: -1vh;
   }
 }
@@ -89,15 +89,11 @@ body {
 
   #nav {
     display: block;
-    height: 120px;
     margin: 0;
-    background: #E9E8E3;
   }
 
   #logo .nav-title {
-    margin: auto;
-    padding: 20px;
-    background: none;
+    margin: 20px auto;
   }
 }
 

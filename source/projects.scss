@@ -1,0 +1,373 @@
+.content {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: auto;
+  margin-top: 3rem;
+
+  .row-two {
+    grid-row: 2;
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: 3fr 3fr 2fr;
+    height: 300px;
+    cursor: pointer;
+
+    .jsgamelab {
+      background-color: black;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .glitch {
+      position: relative;
+      font-weight: 900;
+      font-size: 50px;
+      margin: 0;
+      color: #fff;
+      line-height: 300px;
+      &:hover {
+        -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+        filter: grayscale(100%);
+      }
+
+      &::before {
+        left: 1px;
+        text-shadow: -2px -2px magenta;
+        overflow: hidden;
+        clip-path: inset(50% 0% 3% 0%);
+        animation: glitch-anim-1 2s infinite linear alternate-reverse;
+      }
+
+      &::after {
+        left: -1px;
+        text-shadow: 2px 2px cyan;
+        overflow: hidden;
+        clip-path: inset(45% 0% 33% 0%);
+        animation: glitch-anim-2 2s infinite linear alternate-reverse;
+      }
+    }
+
+    .glitch::before,
+    .glitch::after {
+      content: attr(data-text);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .days-of-code {
+      grid-column: 1;
+      font-size: 60px;
+      font-weight: bold;
+      display: grid;
+      grid-template-rows: 1fr;
+      grid-template-columns: 1fr;
+      background: #ffbb00;
+      text-decoration: none;
+
+      .cutout, .bottom {
+        grid-row: 1;
+        grid-column: 1;
+        margin: auto;
+      }
+
+      .top{
+        color: #ffbb00;
+        margin: auto;
+        transform-origin: 0 100%;
+        text-shadow: 5px 5px 5px rgba(86,65,0,0.4);
+        transform: skew(0deg,-5deg);
+        perspective: 100px;
+        display: inline-block;
+
+        &:hover {
+          animation: up 500ms;
+          cursor: pointer;
+        }
+      }
+      .base{
+        color: #820e25;
+        display: inline-block;
+      }
+      &:hover {
+        -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+        filter: grayscale(100%);
+      }
+    }
+
+    .thecodedose {
+      text-align: center;
+      grid-column: 3;
+      background: url(../img/the_code_dose_avatar.png);
+      background-size: cover;
+      background-position: center;
+      &:hover {
+        -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+        filter: grayscale(100%);
+      }
+    }
+  }
+
+  .row-one {
+    grid-row: 1;
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: 3fr 2fr 2fr;
+    height: 300px;
+    cursor: pointer;
+
+    .chatbot {
+      text-align: center;
+      grid-column: 1;
+      background: url(../img/bot.png);
+      background-size: cover;
+      background-position: center;
+      &:hover {
+        -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+        filter: grayscale(100%);
+      }
+    }
+
+    .chefy {
+      text-align: center;
+      grid-column: 2;
+      background: url(../img/chefy.png);
+      background-size: cover;
+      background-position: center;
+      &:hover {
+        -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+        filter: grayscale(100%);
+      }
+    }
+
+    .prohyre {
+      background: #8D6DFF;
+      text-align: center;
+      color: #fff;
+      text-decoration: none;
+      h1 {
+        line-height: 300px;
+        font-weight: 100;
+        font-size: 60px;
+        margin: 0;
+      }
+      &:hover {
+        -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+        filter: grayscale(100%);
+      }
+    }
+  }
+}
+
+@keyframes glitch-anim-1 {
+  0% {
+    clip-path: inset(50% 0% 3% 0%);
+  }
+  10% {
+    clip-path: inset(10% 0% 34% 0%);
+  }
+  20% {
+    clip-path: inset(23% 0% 67% 0%);
+  }
+  30% {
+    clip-path: inset(40% 0% 35% 0%);
+  }
+  40% {
+    clip-path: inset(25% 0% 70% 0%);
+  }
+  50% {
+    clip-path: inset(50% 0% 32% 0%);
+  }
+  60% {
+    clip-path: inset(5% 0% 30% 0%);
+  }
+  70% {
+    clip-path: inset(67% 0% 12% 0%);
+  }
+  80% {
+    clip-path: inset(5% 0% 45% 0%);
+  }
+  90% {
+    clip-path: inset(10% 0% 30% 0%);
+  }
+  100% {
+    clip-path: inset(20% 0% 50% 0%);
+  }
+}
+
+@keyframes glitch-anim-2 {
+  0% {
+    clip-path: inset(50% 0% 34% 0%);
+  }
+  10% {
+    clip-path: inset(54% 0% 60% 0%);
+  }
+  20% {
+    clip-path: inset(60% 0% 33% 0%);
+  }
+  30% {
+    clip-path: inset(25% 0% 35% 0%);
+  }
+  40% {
+    clip-path: inset(5% 0% 50% 0%);
+  }
+  50% {
+    clip-path: inset(50% 0% 60% 0%);
+  }
+  60% {
+    clip-path: inset(10% 0% 39% 0%);
+  }
+  70% {
+    clip-path: inset(34% 0% 53% 0%);
+  }
+  80% {
+    clip-path: inset(5% 0% 30% 0%);
+  }
+  90% {
+    clip-path: inset(15% 0% 45% 0%);
+  }
+  100% {
+    clip-path: inset(51% 0% 73% 0%);
+  }
+}
+
+@keyframes up{
+  30%{
+    transform: skew(0deg,-10deg);
+    text-shadow: 12px 10px 8px rgba(86,65,0,0.4);
+  }
+  50%{
+    transform: skew(0deg,-5deg);
+    text-shadow: 8px 6px 10px rgba(86,65,0,0.4);
+  }
+  70%{
+    transform: skew(0deg,-10deg);
+    text-shadow: 12px 9px 6px rgba(86,65,0,0.4);
+  }
+  100%{
+    transform: skew(0deg,-5deg);
+    text-shadow: 8px 8px 8px rgba(86,65,0,0.4);
+  }
+}
+
+#circle_1 {
+  width: 25vw;
+  height: 25vw;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #D3E2E9 0%, rgba(255,255,255,0) 100%);
+  position: absolute;
+  top: -20vh;
+  left: 20%;
+  z-index: -1;
+}
+
+#circle_2 {
+  width: 30vw;
+  height: 30vw;
+  border-radius: 50%;
+  background: linear-gradient(70deg, #D3E2E9 0%, rgba(255,255,255,0) 90%);
+  position: fixed;
+  top: 85vh;
+  left: 25vw;
+  z-index: -1;
+}
+
+#circle_3 {
+  width: 40vh;
+  height: 40vh;
+  border-radius: 50%;
+  background: linear-gradient(-10deg, #BFD1B7 0%, rgba(255,255,255,0) 80%);
+  position: fixed;
+  left: 90%;
+  top: 50%;
+  z-index: -2;
+}
+
+@media only screen and (max-width: 1500px) {
+  html, body, .body {
+    overflow-y: scroll;
+  }
+  .content {
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-rows: auto;
+    column-gap: 10px;
+    margin-top: 2rem;
+
+    .left-column h1 {
+      font-size: 2rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .content {
+    .row-two {
+      .days-of-code {
+        font-size: 40px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .content {
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-rows: auto;
+
+    .section-one, .section-two {
+      margin-left: 50px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  body, html, .body {
+    overflow-y: scroll;
+  }
+  .content {
+    margin: 2rem 0;
+    .row-one {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      height: auto;
+
+      .chatbot {
+        grid-row: 1;
+        grid-column: 1;
+      }
+
+      .chefy {
+        grid-row: 2;
+        grid-column: 1;
+      }
+
+      .prohyre {
+        grid-row: 3;
+        grid-column: 1;
+      }
+    }
+    .row-two {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      height: auto;
+
+      .days-of-code {
+        grid-row: 1;
+        grid-column: 1;
+      }
+
+      .jsgamelab {
+        grid-row: 2;
+        grid-column: 1;
+      }
+
+      .thecodedose {
+        grid-row: 3;
+        grid-column: 1;
+        background-size: contain;
+      }
+    }
+  }
+}

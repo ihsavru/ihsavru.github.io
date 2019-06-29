@@ -126,6 +126,7 @@
 @media only screen and (max-width: 1000px) {
   .content {
     grid-template-columns: 1fr 10fr 1fr;
+    margin-top: 5rem;
   }
   .content .section-one, .content .section-two {
     display: block;

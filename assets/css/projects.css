@@ -309,6 +309,7 @@
 
   .content {
     margin: 2rem 0;
+    margin-top: 5rem;
   }
   .content .row-one {
     grid-template-columns: 1fr;

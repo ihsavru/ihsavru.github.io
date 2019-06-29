@@ -15,6 +15,10 @@ body {
   z-index: -1;
 }
 
+.s-menu {
+  display: none;
+}
+
 #nav {
   display: grid;
   grid-template-columns: 1fr 5fr;
@@ -87,13 +91,46 @@ body {
     display: none;
   }
 
+  .s-menu {
+    display: inline-block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 25px;
+    padding: 30px;
+    cursor: pointer;
+  }
+
   #nav {
     display: block;
-    margin: 0;
+    margin: auto;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    z-index: 99;
+    background: rgba(255, 255, 255, 0.9);
   }
 
   #logo .nav-title {
     margin: 20px auto;
+  }
+
+  .menu-out {
+    display: block !important;
+    text-align: left !important;
+    background: rgba(255, 255, 255, 0.9);
+    top: 65px;
+    left: 0;
+    height: 100vh;
+    z-index: 99;
+    padding-left: 20px;
+  }
+  .menu-out a {
+    font-size: 20px;
+    display: block;
+    padding: 6px 0;
+    font-weight: bold;
+    width: fit-content;
   }
 }
 

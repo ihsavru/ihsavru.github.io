@@ -152,10 +152,14 @@ html, body, .body {
 
 @media only screen and (max-width: 700px) {
   .content {
+    margin-top: 5rem;
     .avatar {
       img {
         width: 70vw;
         box-shadow: none;
+        &:hover {
+          box-shadow: none;
+        }
       }
     }
 

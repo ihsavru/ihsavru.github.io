@@ -1,0 +1,84 @@
+diff --git a/app/models/wiki_content/revision.rb b/app/models/wiki_content/revision.rb
+index 42de7244e0..59915fd448 100644
+--- a/app/models/wiki_content/revision.rb
++++ b/app/models/wiki_content/revision.rb
+@@ -70,14 +70,33 @@ def plagiarism_report_link
+ 
+   WIKITEXT_REF_TAGS = 'feature.wikitext.revision.ref_tags'
+   WIKIDATA_REFERENCES = 'feature.len(<datasource.wikidatawiki.revision.references>)'
++  WIKI_SHORTENED_REF_TAGS = 'feature.enwiki.revision.shortened_footnote_templates'
++
++  def wiki_ref_tags
++    features[WIKITEXT_REF_TAGS] || features[WIKIDATA_REFERENCES] || 0
++  end
++
++  def shortened_ref_tags
++    features[WIKI_SHORTENED_REF_TAGS] || 0
++  end
+ 
+   def ref_tags
+-    features[WIKITEXT_REF_TAGS] || features[WIKIDATA_REFERENCES]
++    return nil if features.empty?
++    wiki_ref_tags + shortened_ref_tags
++  end
++
++  def wiki_ref_tags_previous
++    features_previous[WIKITEXT_REF_TAGS] || features_previous[WIKIDATA_REFERENCES] || 0
++  end
++
++  def shortened_ref_tags_previous
++    features_previous[WIKI_SHORTENED_REF_TAGS] || 0
+   end
+ 
+   def ref_tags_previous
+     return 0 if new_article
+-    features_previous[WIKITEXT_REF_TAGS] || features_previous[WIKIDATA_REFERENCES]
++    return nil if features_previous.empty?
++    wiki_ref_tags_previous + shortened_ref_tags_previous
+   end
+ 
+   def references_added
+diff --git a/spec/models/revision_spec.rb b/spec/models/revision_spec.rb
+index 9195094803..e874aabb4e 100644
+--- a/spec/models/revision_spec.rb
++++ b/spec/models/revision_spec.rb
+@@ -29,6 +29,7 @@
+   describe '#references_added' do
+     let(:refs_tags_key) { 'feature.wikitext.revision.ref_tags' }
+     let(:wikidata_refs_tags_key) { 'feature.len(<datasource.wikidatawiki.revision.references>)' }
++    let(:shortened_refs_tags_key) { 'feature.enwiki.revision.shortened_footnote_templates' }
+     let(:enwikidata) { create(:wiki, project: 'wikidata', language: 'en') }
+ 
+     context 'new article' do
+@@ -191,6 +192,31 @@
+         expect(wikidata_val).to eq(5)
+       end
+     end
++
++    context 'has shortened footnote templates' do
++      let(:mw_rev_id) { 902872698 }
++
++      before do
++        stub_wiki_validation
++        create(:revision,
++               mw_rev_id: mw_rev_id,
++               article_id: 55012289,
++               mw_page_id: 55012289,
++               features: {
++                 refs_tags_key => 4,
++                 shortened_refs_tags_key => 131
++               },
++               features_previous: {
++                 refs_tags_key => 0,
++                 shortened_refs_tags_key => 1
++               })
++      end
++
++      it 'should include the shortened footnote template references' do
++        val = described_class.find_by(mw_rev_id: 902872698).references_added
++        expect(val).to eq(134)
++      end
++    end
+   end
+ 
+   describe '#update' do

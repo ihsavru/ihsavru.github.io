@@ -1,7 +1,7 @@
-diff --git src/python file.py src/python file.py
+diff --git a/python file.py b/python file.py
 index 8cde782..11b15b1 100644
---- src/python file.py
-+++ src/python.py
+--- a/python file.py
++++ b/python.py
 @@ -1 +1 @@
 -print("hello world")
 +print("hello")

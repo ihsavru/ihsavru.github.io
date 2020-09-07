@@ -1,7 +1,9 @@
 diff --git a/app.css b/app.css
-index e69de29..a1be226 100644
+deleted file mode 100644
+index b14cd6e..0000000
 --- a/app.css
-+++ b/app.css
-@@ -0,0 +1 @@
-+rfvdfbdf
++++ /dev/null
+@@ -1,2 +0,0 @@
+-new
+-fieldset
 \ No newline at end of file

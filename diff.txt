@@ -1,9 +1,107 @@
-diff --git a/app.css b/app.css
-deleted file mode 100644
-index b14cd6e..0000000
---- a/app.css
-+++ /dev/null
-@@ -1,2 +0,0 @@
--new
--fieldset
+diff --git a/Changed/.DS_Store b/Changed/.DS_Store
+new file mode 100644
+index 0000000..0155fd1
+Binary files /dev/null and b/Changed/.DS_Store differ
+diff --git a/Changed/interview_api.txt b/Changed/interview_api.txt
+new file mode 100644
+index 0000000..422474c
+--- /dev/null
++++ b/Changed/interview_api.txt
+@@ -0,0 +1,47 @@
++POST /x/api/v3.1/interviews
++
++Request:
++{
++  "title": "Interview with Mark",
++  "notes": "Assess the candidate for system design concepts",
++  "starting": "2020-09-02T11:13:57+0000",
++  "duration": "45",
++   "candidate": {
++    "name": "Mark Ramone",
++    "email": "me@markramone.com"
++  },
++  "resume_url": "https://www.example.com/resumes/71884928",
++  "candidate_profile": "www.hackerrank.com/x/candidates/markramone",
++  "interviewers": [
++    "hina@techcorp.com"
++  ],
++  "result_url": "https://www.techcorp.org/interview_ended", 
++  "send_email": false,
++  "metadata": {}
++}
++
++
++Response:
++{
++  "id": "865khgkhv",
++  "starting": "2020-09-02T11:13:57+0000",
++  "duration": "45",
++  "status": "new",
++  "url": "www.hackerrank.com/x/interview/865khgkhv",
++  "user": "13asdj245",
++  "created_at": "2020-09-01T11:13:58+0000",
++  "updated_at": "2020-09-01T11:13:58+0000",
++  "title": "Interview with Mark",
++  "notes": "Assess the candidate for system design concepts",
++  "resume_url": "https://www.example.com/resumes/71884928",
++  "interviewers": [
++    "hina@techcorp.com"
++  ],
++  "result_url": "https://www.techcorp.org/interview_ended",
++  "candidate": {
++    "name": "Mark Ramone",
++    "email": "me@markramone.com"
++  },
++  "metadata": {},
++  "report_url": "www.hackerrank.com/x/interviews/865khgkhv/report"
++}
 \ No newline at end of file
+diff --git a/Changed/interview_api.txt.zip b/Changed/interview_api.txt.zip
+new file mode 100644
+index 0000000..d60eed3
+Binary files /dev/null and b/Changed/interview_api.txt.zip differ
+diff --git a/Original/.DS_Store b/Original/.DS_Store
+deleted file mode 100644
+index c7f9339..0000000
+Binary files a/Original/.DS_Store and /dev/null differ
+diff --git a/Original/interview_api.txt b/Original/interview_api.txt
+deleted file mode 100644
+index 82a80db..0000000
+--- a/Original/interview_api.txt
++++ /dev/null
+@@ -1,30 +0,0 @@
+-POST /x/api/v3/interviews
+-
+-Request:
+-{
+-  "title": "Interview with Mark",
+-  "notes": "Assess the candidate for system design concepts",
+-  "candidate": {
+-    "name": "Mark Ramone",
+-    "email": "me@markramone.com"
+-  },
+-  "metadata": {}
+-}
+-
+-Response:
+-{
+-  "id": "865khgkhv",
+-  "status": "new",
+-  "url": "www.hackerrank.com/x/interview/865khgkhv",
+-  "user": "13asdj245",
+-  "created_at": "2020-09-01T11:13:58+0000",
+-  "updated_at": "2020-09-01T11:13:58+0000",
+-  "title": "Interview with Mark",
+-  "notes": "Assess the candidate for system design concepts",
+-  "candidate": {
+-    "name": "Mark Ramone",
+-    "email": "me@markramone.com"
+-  },
+-  "metadata": {},
+-  "report_url": "www.hackerrank.com/x/interviews/865khgkhv/report"
+-}
+\ No newline at end of file
+diff --git a/Original/interview_api.txt.zip b/Original/interview_api.txt.zip
+deleted file mode 100644
+index 4eccf54..0000000
+Binary files a/Original/interview_api.txt.zip and /dev/null differ

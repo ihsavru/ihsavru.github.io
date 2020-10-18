@@ -16,6 +16,7 @@ window.onload = () => {
     <a>skills</a>
     <a href="https://medium.com/@ihsavru" target="__blank">blog</a>
     <a href='http://thecodedose.com' target="__blank">thecodedose</a>
+    <a href='https://www.redbubble.com/people/thecodedose/shop' target="__blank">store</a>
   `
   document.getElementById('nav').append(logo, menu);
 
